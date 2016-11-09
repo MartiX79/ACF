@@ -1,5 +1,7 @@
-<?php
-  $postid = $item->getID();
-  $value = get_field( "name_testimonial", $postid ); 
-  echo $value;
-?>
+<?php   $postid = $item->getID(); ?>
+
+ <?php if ($value = get_field( "acf_field_name", $postid )): ?>
+   <div class="container">
+	   <?php echo $value  ?>
+   </div>
+ <?php endif; ?>
